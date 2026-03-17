@@ -1,0 +1,40 @@
+{
+  "workspace_dir": "experiments/TON_IoT/10NodesAlpha02Fisher_Rand1",
+  "n_nodes": 10,
+  "log_level": 2,
+  "training": {
+    "perc_sent_weights": 1,
+    "target_probability": 0.5,
+    "models_folder": "models/",
+    "batch_size": 128,
+    "shuffle_batch": true,
+
+    "n_input_features": 17,
+    "n_output_vars": 7,
+
+    "merge_strategy": "fisher_laplace",
+
+    "stop_criterion": "fixed_updates",
+
+    "num_merged_models": 1,
+    "epochs_per_update": 2,
+    "finetuning_epochs": 0,
+
+    "fixed_updates": 15,
+
+    "patience": 1,
+    "min_delta": 0,
+    "serialize_optimizer": false,
+
+    "is_time_to_fail_frequency": 1000,
+    "node_recovery_time_mean": 500,
+    "node_recovery_time_std": 10,
+    "node_failure_probability": 0.001,
+    "max_percentage_failed_nodes": 0.01,
+    "link_failure_probability": 0.001
+  },
+  "history": {
+    "eval_test": true,
+    "freq": 5
+  }
+}
